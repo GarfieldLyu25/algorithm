@@ -1,0 +1,114 @@
+### 通用操作系统文件 ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### IDE 和编辑器配置 ###
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Eclipse
+.settings/
+.project
+.classpath
+bin/
+
+### Java 项目 ###
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 日志文件
+*.log
+
+### Go 项目 ###
+# 二进制文件
+*.exe
+*.out
+*.test
+
+# 依赖目录
+vendor/
+
+# Go 工作区
+go.work
+
+### C++ 项目 ###
+# 编译输出
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+
+# 构建目录
+
+dist/
+
+
+### 构建工具通用 ###
+# Ant
+ant-build/
+
+# 包管理器
+deps/
+lib/
+lib64/
+
+### 日志和临时文件 ###
+
+*.tmp
+*.swp
+*~
+~$*
+
+### 测试相关 ###
+# 测试覆盖率
+coverage/
+*.lcov
+
+# 测试输出
+test-results/
+*.junit
+
+### 文档生成 ###
+docs/_build/
+site/
+
+### 环境文件 ###
+.env
+.venv
+venv/
+
+### 用户特定文件 ###
+local.properties
+*.user
+*.suo
+*.userprefs
