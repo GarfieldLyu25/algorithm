@@ -112,3 +112,8 @@ local.properties
 *.user
 *.suo
 *.userprefs
+
+*.xlsx
+
+py/解密.py
+py/creat ppt.py
