@@ -1,39 +1,28 @@
-"""
- 作者 lgf
- 日期 2025/8/10
-"""
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reverse(self, head:ListNode, tail:ListNode):
-        prev = tail.next
-        p = head
-        while prev != tail:
-            nex = p.next
-            p.next = prev
-            prev = p
-            p = nex
-        return tail,head
-
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-        hair = ListNode(0)
-        hair.next = head
+        n = 0
+        cur = head
+        while cur:
+            n += 1
+            cur = cur.next
+        p0 = dummy = ListNode(next=head)
+        pre = None
+        cur = head
 
-        pre = hair
-        while head:
-            tail = pre
-            for i in range(k):
-                tail = tail.next
-                if not tail:
-                    return hair.next
-            nex = tail.next
-            head,tail = self.reverse(head,tail)
-            pre.next = head
-            #tail.next = nex
-            pre = tail
-            head = tail.next
-
-        return hair.next
+        while n >= k:
+            n -= k
+            for _ in range(k):
+                nxt = cur.next
+                cur.next = pre
+                pre = cur
+                cur = nxt
+            nxt = p0.next
+            nxt.next = cur
+            p0.next = pre
+            p0 = nxt
+        return dummy.next
