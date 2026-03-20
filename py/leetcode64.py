@@ -1,0 +1,9 @@
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        m, n = len(grid), len(grid[0])
+        f = [[inf] * (n + 1) for _ in range(m + 1)]
+        f[0][1] = 0
+        for i, row in enumerate(grid):
+            for j, x in enumerate(row):
+                f[i + 1][j + 1] = min(f[i + 1][j], f[i][j + 1]) + x
+        return f[m][n]
